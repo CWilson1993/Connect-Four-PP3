@@ -151,3 +151,6 @@ def main():
         if game == True:
             break
     print('Well played.')
+
+if __name__ == '__main__':
+    main()
