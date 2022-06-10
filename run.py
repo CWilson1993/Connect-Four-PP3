@@ -1,3 +1,16 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+# Class stack (for each column)
+class Stack:
+    def __init__(self):
+        self._list = []
+    
+    def __len__(self):
+        return len(self._list)    
+    
+    def push(self, element):
+        if len(self._list) <= 6:
+            self._list.append(element)
+        else:
+            return
+    
+    def peek(self):
+        return self._list[-1]
