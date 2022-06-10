@@ -53,3 +53,30 @@ def printBoard(board):
         print('  ' + '-'*((len(row[j][0])-3)))
     print(top)
     print('')
+
+# The below code makes a random choice for the computer and prompts the player to make a move, giving parameters for the choice
+def move(piece, board, Stacks, computer):
+    Set0 = {'1','2','3','4','5','6','7'}
+    if piece == computer:
+        pos = randint(1,7)
+        if len(Stacks[pos-1]) < 6:
+            Stacks[pos-1].push(piece)
+            board[6-len(Stacks[pos-1])][pos-1] = \
+                Stacks[pos-1].peek()
+        else:
+            move(piece, board, Stacks, computer)
+    else:
+        pos = str(input('Your move: '))
+        if (pos in Set0) == False:
+            print('Input must be integer between 1 and 7')
+            move(piece, board, Stacks, computer)
+        else: 
+            pos = int(pos)
+            if len(Stacks[pos-1]) < 6:
+                Stacks[pos-1].push(piece)
+                board[6-len(Stacks[pos-1])][pos-1] = \
+                    Stacks[pos-1].peek()
+            else:
+                print('Column full, try again...')
+                move(piece, board, Stacks, computer)
+    return board, Stacks
