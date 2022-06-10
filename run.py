@@ -80,3 +80,16 @@ def move(piece, board, Stacks, computer):
                 print('Column full, try again...')
                 move(piece, board, Stacks, computer)
     return board, Stacks
+
+
+# The below code checks the winner from all different angles
+def checkWin(S,board):
+    game = False   
+    # Horizontal checker
+    for j in range(0,6):
+        for i in range(3,7):
+            if (board[j][i]==board[j][i-1]==\
+                board[j][i-2]==board[j][i-3]==S):
+                    game = True
+            else:
+                continue
