@@ -1,3 +1,5 @@
+from random import randint
+
 # Class stack (for each column)
 class Stack:
     def __init__(self):
