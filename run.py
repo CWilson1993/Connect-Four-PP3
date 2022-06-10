@@ -114,3 +114,16 @@ def checkWin(S,board):
     if game == True:
         print(S + ' wins!')
     return game
+
+
+# Below is the main program, it includes the initial prompt for the user to choice and identifier
+
+def main():
+    # Below will prompt the user to chose X or O
+    player1 = str( input('Your choice X or O: ') )
+    if player1 != 'X' and player1 != 'O':
+        player1 = str( input('Your choice X or O: ') )
+    if player1 == 'X':
+        computer1 = 'O'
+    else:
+        computer1 = 'X'
