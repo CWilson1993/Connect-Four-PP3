@@ -85,11 +85,19 @@ def move(piece, board, Stacks, computer):
 # The below code checks the winner from all different angles
 def checkWin(S,board):
     game = False   
-    # Horizontal checker
+    # Checks the horizontal board for a winner
     for j in range(0,6):
         for i in range(3,7):
             if (board[j][i]==board[j][i-1]==\
                 board[j][i-2]==board[j][i-3]==S):
+                    game = True
+            else:
+                continue
+    # Checks the vertical board for a winner
+    for i in range(0,7):
+        for j in range(3,6):
+            if (board[j][i]==board[j-1][i]==\
+                board[j-2][i]==board[j-3][i]==S):
                     game = True
             else:
                 continue
