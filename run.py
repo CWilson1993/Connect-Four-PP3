@@ -27,7 +27,7 @@ def initialBoard():
 
 
 # Below is the empty initial stacks, the board will require 7 stacks(columns) to play connect four
-def initStacks():
+def initialStacks():
     S = [ Stack(), Stack(), Stack(), 
          Stack(), Stack(), Stack(), Stack() ]
     return S
@@ -127,3 +127,27 @@ def main():
         computer1 = 'O'
     else:
         computer1 = 'X'
+
+    board = initialBoard()
+    Stacks = initialStacks()
+    printBoard(board)
+    print('How to play: Enter an integer between 1 and 7 ' + \
+          'which relates to each column on the board. ' + \
+          'The first to stack 4 pieces next to each other, ' + \
+          'either horizontally, vertically or diagonally wins.')
+    game = False
+    while game == False:
+        # Player who chose X
+        board, Stacks = move('X',board,Stacks,computer1)
+        printBoard(board)
+        game = checkWin('X',board)
+        if game == True:
+            break
+
+        # Player who chose O
+        board, Stacks = move('O',board,Stacks,computer1)
+        printBoard(board)
+        game = checkWin('O',board)
+        if game == True:
+            break
+    print('Well played.')
