@@ -24,3 +24,11 @@ def initialBoard():
         board.append([' '] * 7)
     
     return board
+
+
+# Below is the empty initial stacks, the board will require 7 stacks(columns) to play connect four
+def initStacks():
+    S = [ Stack(), Stack(), Stack(), 
+         Stack(), Stack(), Stack(), Stack() ]
+    return S
+
