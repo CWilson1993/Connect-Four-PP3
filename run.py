@@ -101,3 +101,16 @@ def checkWin(S,board):
                     game = True
             else:
                 continue
+    # Checks the diagonals of the board for a winner
+    for i in range(0,4):
+        for j in range(0,3):
+            if (board[j][i]==board[j+1][i+1]==\
+                board[j+2][i+2]==board[j+3][i+3]==S or
+                board[j+3][i]==board[j+2][i+1]==\
+                board[j+1][i+2]==board[j][i+3]==S):
+                    game = True
+            else:
+                continue
+    if game == True:
+        print(S + ' wins!')
+    return game
