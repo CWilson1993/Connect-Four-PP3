@@ -32,3 +32,24 @@ def initStacks():
          Stack(), Stack(), Stack(), Stack() ]
     return S
 
+
+# The below prints the game board
+def printBoard(board):
+    rows = ['a','b','c','d','e','f']
+    top = '    1   2   3   4   5   6   7   '
+    row = [[n] for n in range(0,7)]
+    row[0][0] = 'f | '
+    row[1][0] = 'e | '
+    row[2][0] = 'd | '
+    row[3][0] = 'c | '
+    row[4][0] = 'b | '
+    row[5][0] = 'a | '
+    print('')
+    print('  ' + '-'*(len(top)-3))
+    for j in range(0,len(rows)):
+        for i in range(1,8):
+            row[j][0] = row[j][0] + str(board[j][i-1]) + ' | '
+        print(row[j][0])
+        print('  ' + '-'*((len(row[j][0])-3)))
+    print(top)
+    print('')
