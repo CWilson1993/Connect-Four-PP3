@@ -14,3 +14,13 @@ class Stack:
     
     def peek(self):
         return self._list[-1]
+
+
+# Below is the code to initilaize the board which will be empty at first
+def initialBoard():
+    rows = ['a','b','c','d','e','f']
+    board = []
+    for i in range(0,len(rows)):
+        board.append([' '] * 7)
+    
+    return board
