@@ -2,6 +2,8 @@ This was a project to create a game that can be ran in the command terminal. It 
 
 - Deployed Heroku site here: [Connect Four](https://connect-four-pp3.herokuapp.com/)
 
+![responsive-image](docs/responsive_image.png)
+
 ## Features
 
 * #### Initial Choice
