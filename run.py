@@ -68,7 +68,7 @@ def move(piece, board, Stacks, computer):
         else:
             move(piece, board, Stacks, computer)
     else:
-        pos = str(input('Your move: '))
+        pos = str(input('Your move:\n '))
         if (pos in Set0) == False:
             print('Input must be integer between 1 and 7')
             move(piece, board, Stacks, computer)
@@ -122,9 +122,9 @@ def checkWin(S,board):
 
 def main():
     # Below will prompt the user to chose X or O
-    player1 = str( input('Your choice X or O: ') )
+    player1 = str( input('Your choice X or O:\n ') )
     if player1 != 'X' and player1 != 'O':
-        player1 = str( input('Your choice X or O: ') )
+        player1 = str( input('Your choice X or O:\n ') )
     if player1 == 'X':
         computer1 = 'O'
     else:
